@@ -1,4 +1,4 @@
 ---
-title: Welcome to my wedding site
+title: Welcome to our wedding site
 ---
 
