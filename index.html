@@ -53,7 +53,7 @@
     }
     /* Carousel Styling with gaps */
     .carousel-inner {
-  height: 100%; /* Keeps the fixed height */
+  height: 100vh; /* Keeps the fixed height */
   position: relative;
 }
 
@@ -62,10 +62,11 @@
 }
 
 .carousel-item img {
-  max-width: 100%;    /* Ensures there are gaps on each side */
-  max-height: 90%;   /* Ensures there are gaps on top and bottom */
-  object-fit: contain;
+  width: 100%;    /* Ensures there are gaps on each side */
+  height: 100vh;   /* Ensures there are gaps on top and bottom */
+  object-fit: contain; /* Ensures the image is fully visible */
   display: inline-block; /* Allows the image to be centered by text-align */
+  opacity: 0.7; /* Adds a slight transparency to the images */
 }
     /* Overlay styling for centering content */
     .overlay {
@@ -77,7 +78,6 @@
       width: 90%;
       z-index: 10; /* Ensure the overlay is above the carousel images */
       color: rgb(192, 27, 192);
-      height: auto;
     }
     /* RSVP, Where to Stay, and Other Sections */
     section {
@@ -103,7 +103,7 @@
       }
       .overlay {
         width: 95%;
-        padding: 0 0px; /* Add some horizontal padding */
+        padding: 0 10px; /* Add some horizontal padding */
       }
     }
     /* Footer */
