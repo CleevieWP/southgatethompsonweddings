@@ -63,20 +63,21 @@
 
 .carousel-item img {
   max-width: 100%;    /* Ensures there are gaps on each side */
-  max-height: 150vh;
+  max-height: 100%;   /* Ensures there are gaps on top and bottom */
   object-fit: contain;
   display: inline-block; /* Allows the image to be centered by text-align */
 }
-    /* Overlay for Welcome Text */
+    /* Overlay styling for centering content */
     .overlay {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 2;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-      color: #fff;
       text-align: center;
+      width: 90%;
+      z-index: 10; /* Ensure the overlay is above the carousel images */
+      color: rgb(192, 27, 192);
+      height: auto;
     }
     /* RSVP, Where to Stay, and Other Sections */
     section {
@@ -88,11 +89,22 @@
       width: 100%;
       border: 0;
     }
-    /* Countdown styling */
-    #countdown {
-      font-size: 3rem;
+ /* Countdown default styling */
+ #countdown {
+      font-size: 2rem;
       font-weight: bold;
-      margin-bottom: auto;
+      margin-bottom: 20px;
+    }
+    /* Mobile adjustments */
+    @media (max-width: 576px) {
+      #countdown {
+        font-size: 1rem; /* Smaller countdown on mobile */
+        margin-bottom: 15px;
+      }
+      .overlay {
+        width: 95%;
+        padding: 0 10px; /* Add some horizontal padding */
+      }
     }
     /* Footer */
     footer {
@@ -137,17 +149,17 @@
     <div class="container">
       <h1 class="display-4 fw-bold">Welcome to Our Wedding</h1>
       <p class="lead fst-italic">"Love is composed of a single soul inhabiting two bodies." – Aristotle</p>
-      <p class="mb-4">Join us for our special day!</p>
-      <p class="mb-4"><strong>Date:</strong> 14:00 April 26, 2025</p>
+      <p class="mb-0">Join us for our special day!</p>
+      <p class="mb-0"><strong>Date:</strong> 14:00 April 26, 2025</p>
       <p class="mb-4"><strong>Location:</strong> 8 Akasia Avenue, Kleinmond--Western-Cape</p>
       <!-- Countdown Timer -->
-      <div id="countdown" style="font-size: 3rem; font-weight: bold; margin-bottom: 20px;"></div>
+      <div id="countdown" style="font-weight: bold; margin-bottom: 20px;"></div>
       <a href="#rsvp" class="btn btn-lg btn-primary">RSVP</a>
-      <p class="mt-5 fst-italic"style="color: black;"><strong>"We said yes, and soon we’ll say ‘I do,’
+      <p class="mt-0 fst-italic"style="color: black;font-weight: bold;">"We said yes, and soon we’ll say ‘I do,’
         We’re so excited to celebrate with you!
         If you’d like to give a gift, here’s a little clue—
-        A contribution towards our future would be perfect too!"</strong></p>
-      <p class="mt-5"style="color: black;"><strong>Drinks will be provided, but feel free to bring your own if you'd like! We can’t wait to celebrate with you.</strong></p>
+        A contribution towards our future would be perfect too!"</p>
+      <p class="mt-0"style="color: black;font-weight: bold;">Drinks will be provided, but feel free to bring your own if you'd like! We can’t wait to celebrate with you.</p>
     </div>
   </div>
 </header>
